@@ -120,8 +120,13 @@ def tie():
     b = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8,button_9]
 
     for buton in b:
-        if buton.cget != "":
+        if buton.cget("text") != "":
             l.configure(text= "tie")
+
+            return 
+
+    l.configure(text="tie")
+    window.after(1000, g)
     
 
 def computer_move():
@@ -138,6 +143,7 @@ def computer_move():
         c.configure(text="O")
         turn = "player"
     win()
+    tie()
          
 
 def b1():
@@ -148,6 +154,7 @@ def b1():
             turn= "computer"
             button_1.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
 
 def b2():
@@ -158,6 +165,7 @@ def b2():
             turn= "computer"
             button_2.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -171,6 +179,7 @@ def b3():
             turn= "computer"
             button_3.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -183,6 +192,7 @@ def b4():
             turn= "computer"
             button_4.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
             
             pass
@@ -195,6 +205,7 @@ def b5():
             turn= "computer"
             button_5.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -207,6 +218,7 @@ def b6():
             turn= "computer"
             button_6.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
             
             pass
@@ -219,6 +231,7 @@ def b7():
             turn= "computer"
             button_7.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -232,6 +245,7 @@ def b8():
             turn= "computer"
             button_8.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -244,6 +258,7 @@ def b9():
             turn= "computer"
             button_9.configure(text= "X")
             win()
+            tie()
             window.after(1000,computer_move)
             turn = "player"
             pass
