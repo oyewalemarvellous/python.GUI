@@ -3,11 +3,12 @@ import time
 import random
 
 window= Tk()
-window.geometry("150x100")
+window.geometry("250x100")
 window.config(bg= "sky blue")
 
 turn = "player"  
-
+c =  0
+p = 0
 def g():
     global turn
     button_1.configure(text= "")
@@ -23,110 +24,137 @@ def g():
     turn = "player"
 
 def win():
-    global turn
+    global turn,c,p
+
     if button_1.cget("text") == button_2.cget("text") == button_3.cget("text") == "X":
         turn = "player"
+        p +=1
         l.configure(text= turn + " wins")
         
         
     elif button_1.cget("text") == button_2.cget("text") == button_3.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
 
     elif button_4.cget("text") == button_5.cget("text") == button_6.cget("text") == "X":
         turn = "player"
         l.configure(text= turn + " wins")
+        p +=1
         window.after(1000,g)
         
     elif button_4.cget("text") == button_5.cget("text") == button_6.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
         
     elif button_1.cget("text") == button_2.cget("text") == button_3.cget("text") == "X":
         turn = "player"
         l.configure(text= turn + " wins")
+        p +=1
         window.after(1000,g)
         
     elif button_1.cget("text") == button_2.cget("text") == button_3.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
         
     elif button_7.cget("text") == button_8.cget("text") == button_9.cget("text") == "X":
         turn = "player"
         l.configure(text= turn + " wins")
+        p +=1
         window.after(1000,g)
         
     elif button_7.cget("text") == button_8.cget("text") == button_9.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
         
     elif button_1.cget("text") == button_4.cget("text") == button_7.cget("text") == "X":
         turn = "player"
         l.configure(text= turn + " wins")
+        p +=1
         window.after(1000,g)
         
     elif button_1.cget("text") == button_4.cget("text") == button_7.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
         
     elif button_2.cget("text") == button_5.cget("text") == button_8.cget("text") == "X":
         turn = "player"
         l.configure(text= turn + " wins")
+        p +=1
         window.after(1000,g)
         
     elif button_2.cget("text") == button_5.cget("text") == button_8.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
         
     elif button_3.cget("text") == button_6.cget("text") == button_9.cget("text") == "X":
         turn = "player"
         l.configure(text= turn + " wins")
+        p +=1
         window.after(1000,g)
         
     elif button_3.cget("text") == button_6.cget("text") == button_9.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
     
     elif button_1.cget("text") == button_5.cget("text") == button_9.cget("text") == "X":
         turn = "player"
         l.configure(text= turn + " wins")
+        p +=1
         window.after(1000,g)
         
     elif button_1.cget("text") == button_5.cget("text") == button_9.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
     
         
     elif button_3.cget("text") == button_5.cget("text") == button_7.cget("text") == "X":
         turn = "player"
         l.configure(text= turn + " wins")
+        p +=1
         window.after(1000,g)
 
     elif button_3.cget("text") == button_5.cget("text") == button_7.cget("text") == "O":
         turn = "computer"
         l.configure(text= turn + " wins")
+        c +=1
         window.after(1000,g)
+    else:
+        tie()
+    computer.config(text= c)
+    player.config(text= p)
+
+    
+
+
+    
     
 def tie():
-    global turn 
+    global turn
+    count=0
     b = [button_1,button_2,button_3,button_4,button_5,button_6,button_7,button_8,button_9]
 
     for buton in b:
         if buton.cget("text") != "":
-            l.configure(text= "tie")
-
-            return 
-
-    l.configure(text="tie")
-    window.after(1000, g)
+            count +=1
+    if count == 9 :
+        l.configure(text="tie")
+        window.after(1000, g)
     
 
 def computer_move():
@@ -143,7 +171,7 @@ def computer_move():
         c.configure(text="O")
         turn = "player"
     win()
-    tie()
+    
          
 
 def b1():
@@ -154,7 +182,7 @@ def b1():
             turn= "computer"
             button_1.configure(text= "X")
             win()
-            tie()
+            
             window.after(1000,computer_move)
 
 def b2():
@@ -165,7 +193,7 @@ def b2():
             turn= "computer"
             button_2.configure(text= "X")
             win()
-            tie()
+           
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -179,7 +207,7 @@ def b3():
             turn= "computer"
             button_3.configure(text= "X")
             win()
-            tie()
+           
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -192,7 +220,7 @@ def b4():
             turn= "computer"
             button_4.configure(text= "X")
             win()
-            tie()
+          
             window.after(1000,computer_move)
             
             pass
@@ -205,7 +233,7 @@ def b5():
             turn= "computer"
             button_5.configure(text= "X")
             win()
-            tie()
+           
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -218,7 +246,7 @@ def b6():
             turn= "computer"
             button_6.configure(text= "X")
             win()
-            tie()
+           
             window.after(1000,computer_move)
             
             pass
@@ -231,7 +259,7 @@ def b7():
             turn= "computer"
             button_7.configure(text= "X")
             win()
-            tie()
+           
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -245,7 +273,7 @@ def b8():
             turn= "computer"
             button_8.configure(text= "X")
             win()
-            tie()
+            
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -258,7 +286,7 @@ def b9():
             turn= "computer"
             button_9.configure(text= "X")
             win()
-            tie()
+            
             window.after(1000,computer_move)
             turn = "player"
             pass
@@ -292,5 +320,17 @@ button_9.grid(column= 2, row= 2)
 
 l = Label(window, background= "black", foreground= "white")
 l.grid(columnspan=3, row= 3)
+
+computer_point = Label(window, text= "computer", background = "skyblue")
+computer_point.grid(column= 3, row= 0)
+
+computer = Label(window,background = "skyblue")
+computer.grid(column= 4, row= 0)
+
+player_point = Label(window, text= "player", background = "skyblue")
+player_point.grid(column= 3, row= 1)
+
+player = Label(window,background = "skyblue")
+player.grid(column= 4, row= 1)
 
 window.mainloop()
