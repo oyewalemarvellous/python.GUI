@@ -5,7 +5,7 @@ window.geometry("300x400")
 
 first= ""
 second= ""
-third= ""
+operator= ""
 
 def number1():
     global first, second, operator
@@ -20,92 +20,92 @@ def number1():
 def number2():
      global first, second, operator
 
-    if operator == "":
-        first += "2"
-        a.configure(text=first)
-    else:
-        second += "2"
-        a.configure(text=second)
+        if operator == "":
+            first += "2"
+            a.configure(text=first)
+        else:
+            second += "2"
+            a.configure(text=second)
     pass
 def number3():
      global first, second, operator
 
-    if operator == "":
-        first += "3"
-        a.configure(text=first)
-    else:
-        second += "3"
-        a.configure(text=second)
+        if operator == "":
+            first += "3"
+            a.configure(text=first)
+        else:
+            second += "3"
+            a.configure(text=second)
     pass
 def number4():
      global first, second, operator
 
-    if operator == "":
-        first += "4"
-        a.configure(text=first)
-    else:
-        second += "4"
-        a.configure(text=second)
+        if operator == "":
+            first += "4"
+            a.configure(text=first)
+        else:
+            second += "4"
+            a.configure(text=second)
     pass
 def number5():
      global first, second, operator
 
-    if operator == "":
-        first += "5"
-        a.configure(text=first)
-    else:
-        second += "5"
-        a.configure(text=second)
+        if operator == "":
+            first += "5"
+            a.configure(text=first)
+        else:
+            second += "5"
+            a.configure(text=second)
     pass
 def number6():
      global first, second, operator
 
-    if operator == "":
-        first += "6"
-        a.configure(text=first)
-    else:
-        second += "6"
-        a.configure(text=second)
+        if operator == "":
+            first += "6"
+            a.configure(text=first)
+        else:
+            second += "6"
+            a.configure(text=second)
     pass
 def number7():
      global first, second, operator
 
-    if operator == "":
-        first += "7"
-        a.configure(text=first)
-    else:
-        second += "7"
-        a.configure(text=second)
+        if operator == "":
+            first += "7"
+            a.configure(text=first)
+        else:
+            second += "7"
+            a.configure(text=second)
     pass
 def number8():
      global first, second, operator
 
-    if operator == "":
-        first += "8"
-        a.configure(text=first)
-    else:
-        second += "8"
-        a.configure(text=second)
+        if operator == "":
+            first += "8"
+            a.configure(text=first)
+        else:
+            second += "8"
+            a.configure(text=second)
     pass
 def number9():
      global first, second, operator
 
-    if operator == "":
-        first += "9"
-        a.configure(text=first)
-    else:
-        second += "9"
-        a.configure(text=second)
+        if operator == "":
+            first += "9"
+            a.configure(text=first)
+        else:
+            second += "9"
+            a.configure(text=second)
     pass
 def number0():
      global first, second, operator
 
-    if operator == "":
-        first += "0"
-        a.configure(text=first)
-    else:
-        second += "0"
-        a.configure(text=second)
+        if operator == "":
+            first += "0"
+            a.configure(text=first)
+        else:
+            second += "0"
+            a.configure(text=second)
     pass
 def add():
     global operator
@@ -177,7 +177,7 @@ num0.grid(column= 0, row= 4, columnspan= 3)
 add_button = Button(window, text = "+", width= 5, height= 2, command= add)
 add_button.grid(column= 3, row= 1)
 
-divide_button = Button(window, text = "/", width= 5, height= 2, command= subtract)
+divide_button = Button(window, text = "/", width= 5, height= 2, command= divide)
 divide_button.grid(column= 3, row= 2)
 
 multiply_button = Button(window, text = "x", width= 5, height= 2, command= multiply)
