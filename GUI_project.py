@@ -18,34 +18,110 @@ def number1():
         a.configure(text=second)
     pass
 def number2():
-    w= num2.cget("text")
-    a.configure(text= w)
+     global first, second, operator
+
+    if operator == "":
+        first += "2"
+        a.configure(text=first)
+    else:
+        second += "2"
+        a.configure(text=second)
     pass
 def number3():
+     global first, second, operator
+
+    if operator == "":
+        first += "3"
+        a.configure(text=first)
+    else:
+        second += "3"
+        a.configure(text=second)
     pass
 def number4():
+     global first, second, operator
+
+    if operator == "":
+        first += "4"
+        a.configure(text=first)
+    else:
+        second += "4"
+        a.configure(text=second)
     pass
 def number5():
+     global first, second, operator
+
+    if operator == "":
+        first += "5"
+        a.configure(text=first)
+    else:
+        second += "5"
+        a.configure(text=second)
     pass
 def number6():
+     global first, second, operator
+
+    if operator == "":
+        first += "6"
+        a.configure(text=first)
+    else:
+        second += "6"
+        a.configure(text=second)
     pass
 def number7():
+     global first, second, operator
+
+    if operator == "":
+        first += "7"
+        a.configure(text=first)
+    else:
+        second += "7"
+        a.configure(text=second)
     pass
 def number8():
+     global first, second, operator
+
+    if operator == "":
+        first += "8"
+        a.configure(text=first)
+    else:
+        second += "8"
+        a.configure(text=second)
     pass
 def number9():
+     global first, second, operator
+
+    if operator == "":
+        first += "9"
+        a.configure(text=first)
+    else:
+        second += "9"
+        a.configure(text=second)
     pass
 def number0():
+     global first, second, operator
+
+    if operator == "":
+        first += "0"
+        a.configure(text=first)
+    else:
+        second += "0"
+        a.configure(text=second)
     pass
 def add():
+    global operator
+    operator = "+"
     pass
 def subtract():
     global operator
     operator = "-"
     pass
 def divide():
+    global operator
+    operator = "/"
     pass
 def multiply():
+    global operator
+    operator = "*"
     pass
 def equal():
     global first, second, operator
