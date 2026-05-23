@@ -1,5 +1,5 @@
 from tkinter import *
-from tkinter.filedialog import * 
+from tkinter import messagebox
 
 window= Tk()
 window.geometry("300x300")
@@ -7,10 +7,15 @@ window.geometry("300x300")
 def submit():
     name= username_entry.get()
     password= password_entry.get()
+    age= age_reciever.get()
+    Gender= gender.get()
+
+    info= f"""
+    Name : {name}
+    Age  : {age}
+    Gender : {Gender}       """
+    messagebox.showinfo("User Information", info)
     pass
-
-    
-
 
 
 title= Label(window, text= "Personal Application", font= ("arial", 20,"bold"))
@@ -45,7 +50,7 @@ age_label.grid(column= 0, row= 4)
 age_reciever= Spinbox(window, from_= 1, to = 100)
 age_reciever.grid(column= 1, row= 4, columnspan= 2)
 
-submit_button= Button(window, text= "Submit")
+submit_button= Button(window, text= "Submit", command= submit)
 submit_button.grid(column= 0, row= 6, columnspan=2)
 
 check_box= Checkbutton(window, text= "I Acknowledge")
